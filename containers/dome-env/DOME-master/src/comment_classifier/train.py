@@ -182,7 +182,7 @@ if __name__ == '__main__':
         train_loader, test_loader = get_dialog_loaders(config.train_address, config.test_address,
                                                        config.pretrained_model, config.batch_size)
 
-        # best_valid_f1 = 0
+        best_valid_f1 = 0
         # last_improve = 0
         for e in range(config.epochs):
             train_loss, train_macro_f1, train_macro_pre, train_macro_rec, train_micro_f1, train_micro_pre, train_micro_rec, \
@@ -229,6 +229,7 @@ if __name__ == '__main__':
             print("=========================================================================")
 
     print("training finish!!!")
+    torch.save(model.state_dict(), "./saved_model/comment_classifier.pkl")
     print(round(macro_p / 10, 2), round(macro_r / 10, 2), round(macro_f / 10, 2))
     print(round(micro_p / 10, 2), round(micro_r / 10, 2), round(micro_f / 10, 2))
     for p, r, f1 in zip(avg_each_p, avg_each_r, avg_each_f):

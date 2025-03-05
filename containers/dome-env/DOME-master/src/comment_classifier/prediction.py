@@ -115,7 +115,7 @@ class Config(object):
         self.train_address = f'./dataset/all_training_data.json'
         self.test_dataset = 'funcom'
         self.test_mode = 'train'
-        self.pretrained_model = './pretrained_codebert'
+        self.pretrained_model = 'microsoft/codebert-base'
         self.batch_size = 32
         self.lr = 1e-4
         self.bert_lr = 2e-5

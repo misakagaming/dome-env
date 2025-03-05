@@ -4,9 +4,9 @@ import torch
 import time
 from torch import nn
 from collections import OrderedDict, Counter
-from src.comment_generator.eval.bleu import corpus_bleu
-from src.comment_generator.eval.rouge import Rouge
-from src.comment_generator.eval.meteor import Meteor
+from eval.bleu import corpus_bleu
+from eval.rouge import Rouge
+from eval.meteor import Meteor
 from collections import defaultdict
 from torch.nn.utils.rnn import pad_sequence
 import torch.nn.functional as F

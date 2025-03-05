@@ -229,7 +229,7 @@ if __name__ == '__main__':
             print("=========================================================================")
 
     print("training finish!!!")
-    torch.save(model.state_dict(), "./saved_model/comment_classifier.pkl")
+    torch.save(model.state_dict(), "saved_model/comment_classifier.pkl")
     print(round(macro_p / 10, 2), round(macro_r / 10, 2), round(macro_f / 10, 2))
     print(round(micro_p / 10, 2), round(micro_r / 10, 2), round(micro_f / 10, 2))
     for p, r, f1 in zip(avg_each_p, avg_each_r, avg_each_f):

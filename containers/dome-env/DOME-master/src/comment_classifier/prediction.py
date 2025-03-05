@@ -134,7 +134,7 @@ if __name__ == '__main__':
     model.cuda()
 
     print("load the parameters of the pretrained classifier!")
-    model.load_state_dict(torch.load("./saved_model/comment_classifier.pkl"))
+    model.load_state_dict(torch.load("saved_model/comment_classifier.pkl"))
 
     test_loader = get_test_loaders(config.test_dataset, config.test_mode, config.pretrained_model, config.batch_size)
 

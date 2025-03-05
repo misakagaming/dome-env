@@ -1,0 +1,9 @@
+torch==1.9.0
+torchtext==0.6.0
+transformers==4.9.2
+numpy
+tqdm
+gdown==3.12.2
+pandas
+pyarrow
+nltk
